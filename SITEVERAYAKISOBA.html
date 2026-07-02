@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vera Yakissoba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="SITEVERACSS.css">
+  </head>
+  <body>
+
+      <!-- LOADER -->
+      <div id="loader">
+        <div class="loader-logo">VERA <span>YAKISSOBA</span></div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+      </div>
+
+      <!-- FLOATING WA -->
+      <a class="float-wa" href="https://wa.me/5581984088017" target="_blank" title="Falar no WhatsApp">📱</a>
+
+      <!-- NAV -->
+      <nav id="nav">
+          <div class="nav-brand">VERA <span>YAKI</span></div>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#menu">Cardápio</a></li>
+            <li><a href="#como-pedir">Como Pedir</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        <a class="nav-cta" href="https://wa.me/5581984088017" target="_blank">
+        📱 Pedir Agora
+        </a>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section id="hero">
+        <div class="hero-bg">
+          <div class="orb orb1"></div>
+          <div class="orb orb2"></div>
+        </div>
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="hero-eyebrow">🍜 Especialidade da Vera</div>
+              <h1 class="hero-title">
+                <span class="line1">VERA</span>
+                <span class="line2">YAKISSOBA</span>
+              </h1>
+              <p class="hero-sub">O melhor yakissoba da cidade, feito com amor e ingredientes frescos. Entregamos na sua porta ou retire no local.</p>
+              <div class="hero-badges">
+                <span class="badge badge-red">🔥 Yakissoba Artesanal</span>
+                <span class="badge badge-gold">⏰ 18h – 00h</span>
+                <span class="badge badge-green">✔ Seg a Sáb</span>
+              </div>
+              <div class="hero-actions">
+                <a class="btn-primary" href="https://wa.me/5581984088017" target="_blank">
+                  Pedir pelo WhatsApp
+                </a>
+                <a class="btn-secondary" href="#menu">Ver Cardápio ↓</a>
+              </div>
+          </div>
+          <div class="hero-visual">
+            <div class="dish-card dc1">
+              <div class="menu-card-img-wrap" style="height:100%">
+                <img src="YAKISOBA2.jpeg" alt="Yakisoba">
+              </div>
+              <div class="dish-card-label">Yakissoba</div>
+            </div>
+            <div class="dish-card dc2">
+              <img src="aparmegiana.jpg" alt="aparmegiana">
+              <div class="dish-card-label">Filé Aparmegiana</div>
+            </div>
+            <div class="dish-card dc3">
+              <img src="pastel.jpg" alt="pasteis">
+              <div class="dish-card-label">Personalizados</div>
+            </div>
+            <div class="hero-badge-float">
+              <span class="big">ABERTO</span>
+              <span class="small">18H ÀS 00H</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TICKER -->
+      <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack">
+          <span>🍜 Yakissoba Premium</span>
+          <span>🍤 Camarão Fresco</span>
+          <span>🥟 Pastel</span>
+          <span>🥩 Filé Aparmegiana</span>
+          <span>🚗 Entrega Rápida</span>
+          <span>📍 Retirada no Local</span>
+          <span>💳 Dinheiro, Pix & Cartão</span>
+          <span>⭐ Melhor da Cidade</span>
+          <span>🍜 Yakissoba Premium</span>
+          <span>🍤 Camarão Fresco</span>
+          <span>🥟 Pastel</span>
+          <span>🥩 Filé Aparmegiana</span>
+          <span>🏍️ Entrega Rápida</span>
+          <span>📍 Retirada no Local</span>
+          <span>💳 Dinheiro, Pix & Cartão</span>
+          <span>⭐ Melhor da Cidade</span>
+        </div>
+      </div>
+
+      <!-- MENU -->
+      <section id="menu">
+        <div class="section-header reveal">
+          <p class="section-label">O que temos</p>
+          <h2 class="section-title">Nosso <span>Cardápio</span></h2>
+          <p class="section-sub">Pratos preparados na hora, com ingredientes frescos e muito sabor.</p>
+        </div>
+        <div class="menu-tabs reveal">
+          <button class="tab active" onclick="filterMenu('todos', this)">Todos</button>
+          <button class="tab" onclick="filterMenu('yaki', this)">🍜 Yakissoba</button>
+          <button class="tab" onclick="filterMenu('dog', this)">🍜 cachorro-quente</button>
+          <button class="tab" onclick="filterMenu('pastel', this)">🥟 Pastel personalizado</button>
+          <button class="tab" onclick="filterMenu('lanches', this)">🧆 Lanches</button>
+          <button class="tab" onclick="filterMenu('bebidas', this)">🥤 Bebidas</button>
+        </div>
+        <div class="menu-grid" id="menuGrid">
+          <!-- Yakisoba TUDO-->
+          <div class="menu-card reveal" data-cat="yaki">
+            <span class="menu-card-badge">🔥 Mais Pedido</span>
+              <div class="menu-card-img-wrap">
+                <img src="yakitudo.jpeg" alt="Yakisoba">
+                <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
+              </div>
+        
+            <div class="menu-card-body" >
+              <div class="menu-card-title">Yaki Tudo / P,M,G,GG</div>
+              <div class="menu-card-desc">Macarrão, frango, carne, camarão, bacon, calabresa, legumes frescos, molho, shoyu.</div>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">A partir de R$ 27,00</span>
+                  <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20um%20Yaki%20Tudo!" target="_blank">Pedir</a>
+                </div>
+            </div>
+          </div>
+
+          <!--Yakisoba tradicional-->
+          <div class="menu-card reveal" data-cat="yaki">
+            <div class="menu-card-img-wrap">
+              <img src="yakitradi.jpeg" alt="tradicional">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-title">Yaki tradicional / P,M,G,GG</div>
+              <div class="menu-card-desc">Macarrão, carne, frango, legumes, molho, shoyu.</div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">A partir de R$ 18,00</span>
+                <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20um%20Yakissoba%20de%20Tradicional!" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+          <!--YAKI COM CAMARÃO-->
+        <div class="menu-card reveal" data-cat="yaki">
+          <div class="menu-card-img-wrap">
+            <img src="YAKISOBAVERA.jpeg" alt="camarão">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Yaki com Camarão / P,M,G,GG</div>
+            <div class="menu-card-desc">Macarrão, camarão, carne, frango, legumes, molho, shoyu.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">A partir de R$ 23,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20um%20Yakissoba%20com%20Camarão!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+          <!--YAKI SEM LEGUMES-->
+        <div class="menu-card reveal" data-cat="yaki">
+          <div class="menu-card-img-wrap">
+            <img src="YAKISEMLEGUMES.jpeg" alt="sem legumes">
+            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Yaki sem legumes / P,M,G,GG</div>
+            <div class="menu-card-desc">Macarrão, carne, frango, molho, shoyu.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">A partir de R$ 20,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20um%20Yakissoba%20sem%20Legumes!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+          <!--HOTDOG-->
+        <div class="menu-card reveal" data-cat="dog">
+          <span class="menu-card-badge" style="background:var(--red);color:var(--white);">⭐ Premium</span>
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente: 15cm e 30cm</div>
+            <div class="menu-card-desc">Hot Dog Simples, Frango, Carne ou Charque! Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">A partir de R$ 8,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20Cachorro-quente!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+          <!--COXINHAS-->
+        <div class="menu-card reveal" data-cat="lanches">
+          <div class="menu-card-img-wrap">
+            <img src="VERACOXINHAS.jpeg" alt="coxinhas">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#001a10,#005030);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Mini salgados de Festa</div>
+            <div class="menu-card-desc">Kibe de carne, Misto, Bolinha de carne, Coxinha de frango, Coxinha de charque.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">Confira nosso Combos!</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20Coxinhas!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+          <!--PASTEL-->
+        <div class="menu-card reveal" data-cat="pastel">
+          <div class="menu-card-img-wrap">
+            <img src="pastel.jpg" alt="pastel">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a0020,#30106a);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌊</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Monte o Seu Pastel!</div>
+            <div class="menu-card-desc">Até 12 sabores! Queijos, Proteinas, Embutidos, Doces..  escolha quantos sabores desejar!</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">A partir de R$ 10,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20um%20Pastel!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <!--BEBIDAS-->
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="VERAAGUA.jpg" alt="aguamineral">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Água Mineral ou com gás</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">Mineral R$ 2,00 com gás R$ 3,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20Agua!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="VERAGUARANA.jpg" alt="guaranapet">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Guaraná Pet 250ml</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 3,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20PetGuaraná!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="antarticalata.jpg" alt="antarticalata">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Guaraná Antarctica Lata</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 6,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20um%20Guaraná%20Lata!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="fantalata.jpg" alt="fantalata">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Fanta Lata</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 6,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20uma%20Fanta%20Lata!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="cocalata.jpg" alt="cocalata">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Coca-cola Lata</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 6,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20uma%20coca%20Lata!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="cocalatazero.jpg" alt="cocazero">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Coca Zero Lata</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 6,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20uma%20CocaZero%20Lata!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="fanta1l.jpg" alt="fanta1l">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Fanta 1L</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 8,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20uma%20Fanta%201L!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="bebidas">
+          <div class="menu-card-img-wrap">
+            <img src="antartica1l.jpg" alt="antartica1L">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Antártica 1L</div>
+            <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 8,00</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20uma%20antartica%201L!" target="_blank">Pedir</a>
+            </div>
+          </div>
+        </div>
+
+          <div class="menu-card reveal" data-cat="bebidas">
+            <div class="menu-card-img-wrap">
+              <img src="coca1l.jpg" alt="coca1l">
+                <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-title">Coca-cola 1L</div>
+              <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">R$ 10,00</span>
+                <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20uma%20Coca%201L!" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- COMO PEDIR -->
+      <section id="como-pedir">
+        <div class="section-header reveal">
+          <p class="section-label">Simples assim</p>
+          <h2 class="section-title">Como <span>Pedir</span></h2>
+          <p class="section-sub">Pedir é fácil e rápido. Em poucos passos o sabor chega até você.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">01</div>
+            <div class="step-icon">📱</div>
+            <div class="step-title">Acesse o WhatsApp ou Site</div>
+            <div class="step-desc">Clique em qualquer botão de pedido ou acesse diretamente o nosso número.</div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">02</div>
+            <div class="step-icon">🍜</div>
+            <div class="step-title">Escolha seu Prato</div>
+            <div class="step-desc">Diga o que deseja e informe se é entrega ou retirada.</div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">03</div>
+            <div class="step-icon">💳</div>
+            <div class="step-title">Pague Fácil</div>
+            <div class="step-desc">Aceitamos Pix, dinheiro e cartão.</div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">04</div>
+            <div class="step-icon">🏍️</div>
+            <div class="step-title">Receba ou Retire</div>
+            <div class="step-desc">Entregamos até às 23h. Você também pode retirar diretamente no local.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFORMAÇÕES -->
+      <div class="info-strip">
+        <div class="info-strip-grid">
+          <div class="info-item reveal">
+            <div class="info-item-icon">🕕</div>
+            <div class="info-item-title">18h às 00h</div>
+            <div class="info-item-text">Segunda a Sábado<br>Entregas até às 23h</div>
+          </div>
+          <div class="info-item reveal">
+            <div class="info-item-icon">📍</div>
+            <div class="info-item-title">Duas Opções</div>
+            <div class="info-item-text">Entrega em domicílio<br>ou retirada no local</div>
+          </div>
+          <div class="info-item reveal">
+            <div class="info-item-icon">💳</div>
+            <div class="info-item-title">Facilidade</div>
+            <div class="info-item-text">Pix · Dinheiro<br>Crédito & Débito</div>
+          </div>
+          <div class="info-item reveal">
+            <div class="info-item-icon">⭐</div>
+            <div class="info-item-title">+500 Clientes</div>
+            <div class="info-item-text">Satisfação garantida<br>em cada prato ❤️</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALERIA -->
+      <section id="galeria">
+        <div class="section-header reveal">
+          <p class="section-label">Nossos pratos</p>
+          <h2 class="section-title">Galeria de <span>Sabores</span></h2>
+          <p class="section-sub">Cada prato é uma obra de arte feita com carinho pela Vera.</p>
+        </div>
+
+        <div class="gallery-mosaic">
+          <div class="gal-item gal-span2 gal-row2 reveal" onclick="openLightbox( 'embalagemvera.jpeg', 'Embalagens')">
+            <div class="gal-placeholder" style="height:100%;background:linear-gradient(135deg,#2d0d0a,#7a2010);"><img src="embalagemvera.jpeg" alt="embalagem"></div>
+          </div>
+
+          <div class="gal-item reveal" onclick="openLightbox('yakitudo.jpeg', 'Yaki tudo')">
+            <div class="gal-placeholder" style="height:100%;background:linear-gradient(135deg,#001a10,#005030);"><img src="yakitudo.jpeg" alt="yakitudo"></div>
+          </div>
+
+          <div class="gal-item reveal" onclick="openLightbox('VERADOG.jpeg', 'cachorro-quente')">
+            <div class="gal-placeholder" style="height:100%;background:linear-gradient(135deg,#1a1000,#5a3500);"><img src="VERADOG.jpeg" alt="hotdog"></div>
+          </div>
+
+          <div class="gal-item reveal" onclick="openLightbox('VERACOXINHAS.jpeg', 'Coxinhas')">
+            <div class="gal-placeholder" style="height:100%;background:linear-gradient(135deg,#200000,#6a1000);"><img src="VERACOXINHAS.jpeg" alt="coxinhas"></div>
+          </div>
+
+          <div class="gal-item reveal" onclick="openLightbox('arrumadinhonovo.jpeg', 'Arrumadinho')">
+            <div class="gal-placeholder" style="height:100%;background:linear-gradient(135deg,#001520,#003a50);"><img src="arrumadinhonovo.jpeg" alt="arrumadinho"></div>
+          </div>
+
+          <div class="gal-item reveal" onclick="openLightbox('VERAAPARMEGIANA.jpeg', 'Apamergiana')">
+            <div class="gal-placeholder" style="height:100%;background:linear-gradient(135deg,#1a1000,#604020);"><img src="VERAAPARMEGIANA.jpeg" alt="Aparmegiana"></div>
+          </div>
+
+          <div class="gal-item reveal" onclick="openLightbox('YAKISOBAVERA.jpeg', 'Yakisoba')">
+            <div class="gal-placeholder" style="height:100%;background:linear-gradient(135deg,#001800,#005020);"><img src="YAKISOBAVERA.jpeg" alt="yakitradi"></div>
+          </div>
+          
+        </div>
+      </section> 
+
+      <!-- CAIXA DE LUZ -->
+      <div id="lightbox">
+        <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+        <div id="lightbox-content" style="font-size:10rem;text-align:center;"></div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <section id="depoimentos">
+        <div class="section-header reveal">
+          <p class="section-label">Comentários</p>
+          <h2 class="section-title">O que dizem <span>nossos clientes</span></h2>
+        </div>
+        <div class="testi-track-wrap">
+          <div class="testi-track" id="testiTrack">
+            <!-- set A -->
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"O melhor yakissoba que já comi! O caldo é ótimo e o macarrão vem bem temperado. Virei cliente!"</p>
+              <div class="testi-author">Maria Silva <span>— Recife, PE</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Entrega super rápida e o prato chegou quente e fresquinho. Camarão TOP. Recomendo demais!"</p>
+              <div class="testi-author">João Ferreira <span>— Cliente Frequente</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"A Vera tem um capricho no preparo. Nunca decepcionou. Família toda aprova!"</p>
+              <div class="testi-author">Ana Paula <span>— Av. Norte, PE</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Pedi pelo WhatsApp e em menos de 40 minutos chegou. Perfeito!"</p>
+            <div class="testi-author">Carlos Eduardo <span>— Recife, PE</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Os pasteis são absurdamente bons. Peço toda semana. Muito obrigada, Vera!"</p>
+              <div class="testi-author">Fernanda Gomes <span>— Cliente Fiel</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Yakissoba Tudo é excepcional. Porção generosa e preço justo. Nota dez!"</p>
+              <div class="testi-author">Roberto Alves <span>— Recife, PE</span></div>
+            </div>
+            <!-- duplicated for infinite loop -->
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"O melhor yakissoba que já comi! O caldo é ótimo e o macarrão vem bem temperado. Virei cliente fiel!"</p>
+              <div class="testi-author">Maria Silva <span>— Recife, PE</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Entrega super rápida e o prato chegou quente e fresquinho. Camarão impecável. Recomendo demais!"</p>
+              <div class="testi-author">João Ferreira <span>— Cliente Frequente</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"A Vera tem um capricho único no preparo. Nunca decepcionou. Família toda aprova!"</p>
+              <div class="testi-author">Ana Paula <span>— Av. Norte, PE</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Pedi pelo WhatsApp e em menos de 40 minutos chegou. Perfeito!"</p>
+              <div class="testi-author">Carlos Eduardo <span>— Recife, PE</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Os pasteis são absurdamente bons. Peço toda semana. Muito obrigada, Vera!"</p>
+              <div class="testi-author">Fernanda Gomes <span>— Cliente Fiel</span></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-text">"Yakissoba Tudo é excepcional. Porção generosa e preço justo. Nota dez!"</p>
+              <div class="testi-author">Roberto Alves <span>— Recife, PE</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- CONTATO -->
+      <section id="contato">
+        <div class="section-header reveal">
+          <p class="section-label">Fale com a gente</p>
+          <h2 class="section-title">Entre em <span>Contato</span></h2>
+        </div>
+        <div class="contact-grid">
+        <div>
+          <ul class="contact-info-list">
+            <li>
+              <span class="ci-icon">📱</span>
+              <div class="ci-body">
+                <div class="ci-label">WhatsApp / Pedidos</div>
+                <div class="ci-value">(81) 98408-8017</div>
+              </div>
+            </li>
+            <li>
+              <span class="ci-icon">🕕</span>
+              <div class="ci-body">
+                <div class="ci-label">Horário de Funcionamento</div>
+                <div class="ci-value">Segunda a Sábado — 18h às 00h</div>
+              </div>
+            </li>
+            <li>
+              <span class="ci-icon">🏍️</span>
+              <div class="ci-body">
+                <div class="ci-label">Entregas</div>
+                <div class="ci-value">Até às 23h</div>
+              </div>
+            </li>
+            <li>
+              <span class="ci-icon">💳</span>
+              <div class="ci-body">
+                <div class="ci-label">Formas de Pagamento</div>
+                <div class="ci-value">Pix · Dinheiro · Cartão Crédito/Débito</div>
+              </div>
+            </li>
+            <li>
+              <span class="ci-icon">📦</span>
+              <div class="ci-body">
+                <div class="ci-label">Modalidades</div>
+                <div class="ci-value">Entrega & Retirada</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="wa-card">
+            <div class="wa-card-icon">📱</div>
+            <h3>Peça Agora!</h3>
+            <p>Clique abaixo e seja atendido diretamente pela Vera no WhatsApp. Rápido, fácil e sem complicação!</p>
+            <a class="btn-wa-big" href="https://wa.me/5581984088017?text=Olá%20Vera!%20Quero%20fazer%20um%20pedido%20😊" target="_blank">
+              💬 Abrir WhatsApp
+            </a>
+            <p class="wa-number">(81) 98408-8017</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- RODA PÉ -->
+      <footer>
+        <div class="footer-brand">VERA <span>YAKISSOBA</span></div>
+        <p class="footer-note">© 2025 Vera Yakissoba · Feito com ❤️ e muito sabor</p>
+        <a href="https://wa.me/5581984088017" target="_blank" style="font-size:.85rem;color:var(--green);font-weight:700;">
+          📱 (81) 98408-8017
+        </a>
+      </footer>
+
+      <script src="VERASITEJS.js"></script>
+    
+
+  </body>
+</html>
