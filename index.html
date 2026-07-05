@@ -40,7 +40,7 @@
         <div class="cart-panel-head">
           <span class="cart-eyebrow">Comanda</span>
           <h3>Seu pedido</h3>
-          <button class="cart-close" id="cartCloseBtn" aria-label="Fechar">X</button>
+          <button class="cart-close" id="cartCloseBtn" aria-label="Fechar">✕</button>
         </div>
         <div class="cart-tear"></div>
         <div class="cart-panel-body" id="cartPanelBody"></div>
@@ -152,37 +152,21 @@
         <div class="menu-tabs reveal">
           <button class="tab active" onclick="filterMenu('todos', this)">Todos</button>
           <button class="tab" onclick="filterMenu('yaki', this)">🍜 Yakissoba</button>
-          <button class="tab" onclick="filterMenu('dog', this)">🍜 cachorro-quente</button>
+          <button class="tab" onclick="filterMenu('dog', this)">🌭 cachorro-quente</button>
+          <button class="tab" onclick="filterMenu('arrumadinho', this)">🍽️ Arrumadinho</button>
+          <button class="tab" onclick="filterMenu('fileaparmegiana', this)">🍛 Filé à Parmegiana</button>
           <button class="tab" onclick="filterMenu('pastel', this)">🥟 Pastel personalizado</button>
           <button class="tab" onclick="filterMenu('lanches', this)">🧆 Lanches</button>
           <button class="tab" onclick="filterMenu('bebidas', this)">🥤 Bebidas</button>
         </div>
         <div class="menu-grid" id="menuGrid">
           <!-- Yakisoba TUDO-->
-          
-          
-          <div class="menu-card reveal" data-cat="yaki">
-            <span class="menu-card-badge">🍜 Tamanhos</span>
-              <div class="menu-card-img-wrap">
-                <img src="embalagemvera.jpeg" alt="embalagens" class="menu-card-img">
-              </div>
-            <div class="menu-card-body" >
-              <div class="menu-card-title">Embalagens</div>
-              <div class="menu-card-desc">todos os tamanhos para você escolher!</div>
-
-                <div class="menu-card-footer">
-                  <span class="menu-card-price">P/M/G/GG</span>
-                </div>
-            </div>
-          </div>
-
           <div class="menu-card reveal" data-cat="yaki">
             <span class="menu-card-badge">🔥 Mais Pedido</span>
               <div class="menu-card-img-wrap">
                 <img src="yakitudo.jpeg" alt="Yakisoba">
                 <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
               </div>
-        
             <div class="menu-card-body" >
               <div class="menu-card-title">Yaki Tudo | M - 600g</div>
               <div class="menu-card-desc">Macarrão, frango, carne, camarão, bacon, calabresa, legumes frescos, molho, shoyu.</div>
@@ -193,12 +177,11 @@
             </div>
           </div>
 
-          <div class="menu-card reveal" data-cat="yaki">
+          <div class="menu-card reveal" data-cat="yaki">           
               <div class="menu-card-img-wrap">
                 <img src="yakitudo.jpeg" alt="Yakisoba">
                 <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
               </div>
-        
             <div class="menu-card-body" >
               <div class="menu-card-title">Yaki Tudo | P - 400g</div>
               <div class="menu-card-desc">Macarrão, frango, carne, camarão, bacon, calabresa, legumes frescos, molho, shoyu.</div>
@@ -214,7 +197,6 @@
                 <img src="yakitudo.jpeg" alt="Yakisoba">
                 <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
               </div>
-        
             <div class="menu-card-body" >
               <div class="menu-card-title">Yaki Tudo | G - 1kg</div>
               <div class="menu-card-desc">Macarrão, frango, carne, camarão, bacon, calabresa, legumes frescos, molho, shoyu.</div>
@@ -224,8 +206,8 @@
                 </div>
             </div>
           </div>
-          
-          <div class="menu-card reveal" data-cat="yaki">
+
+          <div class="menu-card reveal" data-cat="yaki">            
               <div class="menu-card-img-wrap">
                 <img src="yakitudo.jpeg" alt="Yakisoba">
                 <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
@@ -242,10 +224,11 @@
           </div>
 
 
+          <!--Yakisoba tradicional-->
           <div class="menu-card reveal" data-cat="yaki">
             <div class="menu-card-img-wrap">
               <img src="yakitradi.jpeg" alt="tradicional">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
             </div>
             <div class="menu-card-body">
               <div class="menu-card-title">Yaki tradicional | P - 400g</div>
@@ -260,10 +243,10 @@
           <div class="menu-card reveal" data-cat="yaki">
             <div class="menu-card-img-wrap">
               <img src="yakitradi.jpeg" alt="tradicional">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
             </div>
             <div class="menu-card-body">
-              <div class="menu-card-title">Yaki tradicional / M - 600g</div>
+              <div class="menu-card-title">Yaki tradicional | M - 600g</div>
               <div class="menu-card-desc">Macarrão, carne, frango, legumes, molho, shoyu.</div>
               <div class="menu-card-footer">
                 <span class="menu-card-price">R$ 28,00</span>
@@ -272,15 +255,13 @@
             </div>
           </div>
 
-
-          <!--Yakisoba tradicional-->
           <div class="menu-card reveal" data-cat="yaki">
             <div class="menu-card-img-wrap">
               <img src="yakitradi.jpeg" alt="tradicional">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
             </div>
             <div class="menu-card-body">
-              <div class="menu-card-title">Yaki tradicional / G - 1kg</div>
+              <div class="menu-card-title">Yaki tradicional | G - 1 kg</div>
               <div class="menu-card-desc">Macarrão, carne, frango, legumes, molho, shoyu.</div>
               <div class="menu-card-footer">
                 <span class="menu-card-price">R$ 43,00</span>
@@ -289,14 +270,13 @@
             </div>
           </div>
 
-          <!--Yakisoba tradicional-->
           <div class="menu-card reveal" data-cat="yaki">
             <div class="menu-card-img-wrap">
               <img src="yakitradi.jpeg" alt="tradicional">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
             </div>
             <div class="menu-card-body">
-              <div class="menu-card-title">Yaki tradicional / GG - 1,5kg</div>
+              <div class="menu-card-title">Yaki tradicional | GG - 1,5 kg</div>
               <div class="menu-card-desc">Macarrão, carne, frango, legumes, molho, shoyu.</div>
               <div class="menu-card-footer">
                 <span class="menu-card-price">R$ 62,00</span>
@@ -310,10 +290,10 @@
         <div class="menu-card reveal" data-cat="yaki">
           <div class="menu-card-img-wrap">
             <img src="YAKISOBAVERA.jpeg" alt="camarão">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Yaki com Camarão / P - 400g</div>
+            <div class="menu-card-title">Yaki com Camarão | P - 400g</div>
             <div class="menu-card-desc">Macarrão, camarão, carne, frango, legumes, molho, shoyu.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">R$ 23,00</span>
@@ -322,28 +302,30 @@
           </div>
         </div>
 
-        <div class="menu-card reveal" data-cat="yaki">
-          <div class="menu-card-img-wrap">
-            <img src="YAKISOBAVERA.jpeg" alt="camarão">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Yaki com Camarão / M - 600g</div>
-            <div class="menu-card-desc">Macarrão, camarão, carne, frango, legumes, molho, shoyu.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 35,00</span>
-              <button class="btn-add-cart" data-name="Yaki com Camarão M" data-price="35.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
 
         <div class="menu-card reveal" data-cat="yaki">
           <div class="menu-card-img-wrap">
             <img src="YAKISOBAVERA.jpeg" alt="camarão">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Yaki com Camarão / G - 1kg</div>
+            <div class="menu-card-title">Yaki com Camarão | M - 600g</div>
+            <div class="menu-card-desc">Macarrão, camarão, carne, frango, legumes, molho, shoyu.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 28,00</span>
+              <button class="btn-add-cart" data-name="Yaki com Camarão M" data-price="28.00">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-card reveal" data-cat="yaki">
+          <div class="menu-card-img-wrap">
+            <img src="YAKISOBAVERA.jpeg" alt="camarão">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Yaki com Camarão | G - 1 kg</div>
             <div class="menu-card-desc">Macarrão, camarão, carne, frango, legumes, molho, shoyu.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">R$ 58,00</span>
@@ -352,29 +334,31 @@
           </div>
         </div>
 
+
         <div class="menu-card reveal" data-cat="yaki">
           <div class="menu-card-img-wrap">
             <img src="YAKISOBAVERA.jpeg" alt="camarão">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Yaki com Camarão / GG - 1,5kg</div>
+            <div class="menu-card-title">Yaki com Camarão | GG - 1,5 kg</div>
             <div class="menu-card-desc">Macarrão, camarão, carne, frango, legumes, molho, shoyu.</div>
             <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 83,00</span>
-              <button class="btn-add-cart" data-name="Yaki com Camarão GG" data-price="83.00">Adicionar ao carrinho</button>
+              <span class="menu-card-price">R$ 74,00</span>
+              <button class="btn-add-cart" data-name="Yaki com Camarão GG" data-price="74.00">Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
+
 
           <!--YAKI SEM LEGUMES-->
         <div class="menu-card reveal" data-cat="yaki">
           <div class="menu-card-img-wrap">
             <img src="YAKISEMLEGUMES.jpeg" alt="sem legumes">
-            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Yaki sem legumes / P - 400g</div>
+            <div class="menu-card-title">Yaki sem legumes | P - 400g</div>
             <div class="menu-card-desc">Macarrão, carne, frango, molho, shoyu.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">R$ 20,00</span>
@@ -386,10 +370,10 @@
         <div class="menu-card reveal" data-cat="yaki">
           <div class="menu-card-img-wrap">
             <img src="YAKISEMLEGUMES.jpeg" alt="sem legumes">
-            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Yaki sem legumes / M - 600g</div>
+            <div class="menu-card-title">Yaki sem legumes | M - 600g</div>
             <div class="menu-card-desc">Macarrão, carne, frango, molho, shoyu.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">R$ 30,00</span>
@@ -401,10 +385,10 @@
         <div class="menu-card reveal" data-cat="yaki">
           <div class="menu-card-img-wrap">
             <img src="YAKISEMLEGUMES.jpeg" alt="sem legumes">
-            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Yaki sem legumes / G - 1kg</div>
+            <div class="menu-card-title">Yaki sem legumes | G - 1kg</div>
             <div class="menu-card-desc">Macarrão, carne, frango, molho, shoyu.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">R$ 53,00</span>
@@ -416,10 +400,10 @@
         <div class="menu-card reveal" data-cat="yaki">
           <div class="menu-card-img-wrap">
             <img src="YAKISEMLEGUMES.jpeg" alt="sem legumes">
-            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥩</div>
+            <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a0800,#5a2010);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍜</div>
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Yaki sem legumes / GG - 1,5kg</div>
+            <div class="menu-card-title">Yaki sem legumes | GG - 1,5kg</div>
             <div class="menu-card-desc">Macarrão, carne, frango, molho, shoyu.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">R$ 74,00</span>
@@ -429,130 +413,177 @@
         </div>
 
           <!--HOTDOG-->
-
-        <div class="menu-card reveal" data-cat="dog">
-          <div class="menu-card-img-wrap">
-            <img src="VERADOG.jpeg" alt="cachorroquente">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog simples (15cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: Salcicha ao molho, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 8,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog simples (15cm)" data-price="8.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card reveal" data-cat="dog">
-          <div class="menu-card-img-wrap">
-            <img src="VERADOG.jpeg" alt="cachorroquente">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog simples (30cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: Salcicha ao molho, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 18,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog simples (30cm)" data-price="18.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card reveal" data-cat="dog">
-          <div class="menu-card-img-wrap">
-            <img src="VERADOG.jpeg" alt="cachorroquente">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog de frango (15cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: Creme de frango, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 12,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog de frango (15cm)" data-price="12.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card reveal" data-cat="dog">
-          <div class="menu-card-img-wrap">
-            <img src="VERADOG.jpeg" alt="cachorroquente">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog de frango (30cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: Creme de frango, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 26,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog de frango (30cm)" data-price="26.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card reveal" data-cat="dog">
-          <div class="menu-card-img-wrap">
-            <img src="VERADOG.jpeg" alt="cachorroquente">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog de Carne (15cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: carne moída ao molho, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 12,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog de carne (15cm)" data-price="12.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card reveal" data-cat="dog">
-          <div class="menu-card-img-wrap">
-            <img src="VERADOG.jpeg" alt="cachorroquente">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog de Carne (30cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: carne moída ao molho, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 26,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog de carne (30cm)" data-price="26.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card reveal" data-cat="dog">
-          <div class="menu-card-img-wrap">
-            <img src="VERADOG.jpeg" alt="cachorroquente">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog de charque (15cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: Carne seca triturada, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 15,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog de charque (15cm)" data-price="15.00">Adicionar ao carrinho</button>
-            </div>
-          </div>
-        </div>
-
         <div class="menu-card reveal" data-cat="dog">
           <span class="menu-card-badge" style="background:var(--red);color:var(--white);">⭐ Premium</span>
-            <div class="menu-card-img-wrap">
-              <img src="VERADOG.jpeg" alt="cachorroquente">
-                <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
-            </div>
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
           <div class="menu-card-body">
-            <div class="menu-card-title">Hot-Dog de charque (30cm)</div>
-            <div class="menu-card-desc">ACOMPANHAMENTO: Carne seca triturada, batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-title">Cachorro quente SIMPLES | 15cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
             <div class="menu-card-footer">
-              <span class="menu-card-price">R$ 33,00</span>
-              <button class="btn-add-cart" data-name="Hot-Dog de charque (30cm)" data-price="33.00">Adicionar ao carrinho</button>
+              <span class="menu-card-price">R$ 8,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente (15cm)" data-price="8.00">Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
 
-          <!--COXINHAS-->
+        <div class="menu-card reveal" data-cat="dog">
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente SIMPLES | 30cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 18,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente (30cm)" data-price="18.00">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
 
+        <div class="menu-card reveal" data-cat="dog">
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente de FRANGO | 15cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 12,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente de FRANGO (15cm)" data-price="12.00">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="dog">
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente de FRANGO | 30cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 26,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente de FRANGO (30cm)" data-price="26.00">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="dog">
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente de CARNE | 15cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 12,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente de CARNE (15cm)" data-price="12.00">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="dog">
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente de CARNE | 30cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 26,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente de CARNE (30cm)" data-price="26.00">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="dog">
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente de CHARQUE | 15cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 15,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente de CHARQUE (15cm)" data-price="15.00">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-cat="dog">
+          <div class="menu-card-img-wrap">
+            <img src="VERADOG.jpeg" alt="cachorroquente">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#1a1000,#5a4000);display:flex;align-items:center;justify-content:center;font-size:4rem;">🌭</div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cachorro quente de CHARQUE | 30cm </div>
+            <div class="menu-card-desc">Acompanhamento: batata palha, queijo parmesão, milho, vinagrete. Molhos: CHEDDAR, Maionesa da casa, ketchup e Barbecue.</div>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">R$ 33,00</span>
+              <button class="btn-add-cart" data-name="Cachorro-quente de CHARQUE (30cm)" data-price="33.00">Adicionar ao carrinho</button>
+
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="menu-card reveal" data-cat="arrumadinho">
+          <div class="menu-card-img-wrap">
+            <img src="ARRUMADINHOVERA.jpeg" alt="Yakisoba">
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍽️</div>
+          </div>
+            <div class="menu-card-body" >
+              <div class="menu-card-title">ARRUMADINHO de 300g|450g|900g</div>
+              <div class="menu-card-desc">FRANGO | CALABRESA | CHARQUE | CARNE DE SOL. ACOMPANHAMENTO: ARROZ BRANCO, FEIJÃO DE CORDA, VINAGRETE, OVO DE CODORNA, FAROFA, QUEIJO COALHO, BATATA PALHA</div>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">Peça já o seu!</span>
+                  <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20Arrumadinho!" target="_blank">Pedir</a>
+                </div>
+            </div>
+        </div>
+
+
+
+          <div class="menu-card reveal" data-cat="fileaparmegiana">
+            <div class="menu-card-img-wrap">
+              <img src="aparmegiana.jpg" alt="aparmegiana">
+                <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍽️</div>
+            </div>
+            <div class="menu-card-body" >
+              <div class="menu-card-title">Filé à Parmegiana | M - 500g</div>
+              <div class="menu-card-desc">FILÉ DE PEITO EMPANADO, MACARRÃO ESPAGUETE, MOLHO DE TOMATE DA CASA, QUEIJO MUSSARELA, QUEIJO   PARMESÃO, PURE DE BATATA.</div>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">R$ 26,00</span>
+                  <button class="btn-add-cart" data-name="filé à parmegiana M" data-price="26.00">Adicionar ao carrinho</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal" data-cat="fileaparmegiana">
+            <div class="menu-card-img-wrap">
+              <img src="aparmegiana.jpg" alt="aparmegiana">
+                <div style="width:100%;height:180px;background:linear-gradient(135deg,#2d1000,#7a3015);display:flex;align-items:center;justify-content:center;font-size:4rem;">🍽️</div>
+            </div>
+            <div class="menu-card-body" >
+              <div class="menu-card-title">Filé à Parmegiana | G - 1kg</div>
+              <div class="menu-card-desc">FILÉ DE PEITO EMPANADO, MACARRÃO ESPAGUETE, MOLHO DE TOMATE DA CASA, QUEIJO MUSSARELA, QUEIJO   PARMESÃO, PURE DE BATATA.</div>
+                <div class="menu-card-footer">
+                  <span class="menu-card-price">R$ 50,00</span>
+                  <button class="btn-add-cart" data-name="filé à parmegiana G" data-price="50.00">Adicionar ao carrinho</button>
+                </div>
+            </div>
+          </div>
+
+          <!--COXINHAS-->
         <div class="menu-card reveal" data-cat="lanches">
           <div class="menu-card-img-wrap">
             <img src="VERACOXINHAS.jpeg" alt="coxinhas">
@@ -560,7 +591,7 @@
           </div>
           <div class="menu-card-body">
             <div class="menu-card-title">Mini salgados de Festa</div>
-            <div class="menu-card-desc">Combos com 50, 80 e 100 un.! Kibe de carne, Misto, Bolinha de carne, Coxinha de frango, Coxinha de charque.</div>
+            <div class="menu-card-desc">Kibe de carne, Misto, Bolinha de carne, Coxinha de frango, Coxinha de charque.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">Confira nossos Combos!</span>
               <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20Coxinhas!" target="_blank">Pedir</a>
@@ -572,14 +603,14 @@
         <div class="menu-card reveal" data-cat="pastel">
           <div class="menu-card-img-wrap">
             <img src="pastel.jpg" alt="pastel">
-              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a0020,#30106a);display:flex;align-items:center;justify-content:center;font-size:4rem;">🧆</div>
+              <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a0020,#30106a);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥟</div>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-title">Monte o Seu Pastel!</div>
             <div class="menu-card-desc">Até 12 sabores! Queijos, Proteinas, Embutidos, Doces..  escolha quantos sabores desejar!</div>
             <div class="menu-card-footer">
-              <span class="menu-card-price">Monte o Seu!</span>
-              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20Coxinhas!" target="_blank">Pedir</a>
+              <span class="menu-card-price">Monte já o seu!</span>
+              <a class="btn-pedido" href="https://wa.me/5581984088017?text=Quero%20pedir%20Pastel!" target="_blank">Pedir</a>
             </div>
           </div>
         </div>
@@ -595,7 +626,7 @@
             <div class="menu-card-desc">Gelado e refrescante pra acompanhar seu prato favorito.</div>
             <div class="menu-card-footer">
               <span class="menu-card-price">Mineral R$ 2,00 com gás R$ 3,00</span>
-              <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;"><button class="btn-add-cart" data-name="Água Mineral" data-price="2.00">+ Mineral</button><button class="btn-add-cart" data-name="Água com Gás" data-price="3.00">+ Com Gás</button></div>
+              <div class="cart-dual-btns"><button class="btn-add-cart" data-name="Água Mineral" data-price="2.00">+ Mineral</button><button class="btn-add-cart" data-name="Água com Gás" data-price="3.00">+ Com Gás</button></div>
             </div>
           </div>
         </div>
@@ -632,7 +663,7 @@
 
         <div class="menu-card reveal" data-cat="bebidas">
           <div class="menu-card-img-wrap">
-            <img src="fantalata.jpg" alt="fantalata">
+            <img src="fantalataatual.jpg" alt="fantalata">
               <div style="width:100%;height:180px;background:linear-gradient(135deg,#0a1520,#1a4060);display:flex;align-items:center;justify-content:center;font-size:4rem;">🥤</div>
           </div>
           <div class="menu-card-body">
@@ -846,7 +877,7 @@
             </div>
             <div class="testi-card">
               <div class="testi-stars">★★★★★</div>
-              <p class="testi-text">"Entrega super rápida e o prato chegou quente. Camarão TOP. Recomendo demais!"</p>
+              <p class="testi-text">"Entrega super rápida e o prato chegou quente e fresquinho. Camarão TOP. Recomendo demais!"</p>
               <div class="testi-author">João Ferreira <span>— Cliente Frequente</span></div>
             </div>
             <div class="testi-card">
@@ -877,7 +908,7 @@
             </div>
             <div class="testi-card">
               <div class="testi-stars">★★★★★</div>
-              <p class="testi-text">"Entrega super rápida e o prato chegou quente. Camarão impecável. Recomendo demais!"</p>
+              <p class="testi-text">"Entrega super rápida e o prato chegou quente e fresquinho. Camarão impecável. Recomendo demais!"</p>
               <div class="testi-author">João Ferreira <span>— Cliente Frequente</span></div>
             </div>
             <div class="testi-card">

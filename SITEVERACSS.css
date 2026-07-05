@@ -1,4 +1,4 @@
-/* ── TOKENS ─────────────────────────────────────────── */
+ /* ── TOKENS ─────────────────────────────────────────── */
     :root {
       --red:    #C8152A;
       --gold:   #F5C518;
@@ -134,7 +134,7 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
       align-items: center; max-width: 1100px; width: 100%;
     }
-    /*.hero-text {}*/
+    .hero-text {}
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: .5rem;
       background: rgba(245,197,24,.12);
@@ -336,18 +336,9 @@
       font-size: 3rem;
       transition: transform .4s ease;
     }
-    .menu-card:hover .menu-card-img img {
-       transform: scale(1.08);
-       }
-    .menu-card-img-wrap { 
-      overflow: hidden;
-      height: 180px; 
-    }
-    .menu-card-img-wrap img { 
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .4s ease; }
+    .menu-card:hover .menu-card-img img { transform: scale(1.08); }
+    .menu-card-img-wrap { overflow: hidden; height: 180px; }
+    .menu-card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
     .menu-card:hover .menu-card-img-wrap img { transform: scale(1.08); }
     .menu-card-body { padding: 1.1rem 1.2rem 1.3rem; }
     .menu-card-title { font-weight: 900; font-size: 1.05rem; margin-bottom: .3rem; }
@@ -506,7 +497,7 @@
       border-radius: 12px; padding: 1rem 1.2rem;
     }
     .ci-icon { font-size: 1.5rem; flex-shrink: 0; }
-    /*.ci-body {}*/
+    .ci-body {}
     .ci-label { font-size: .72rem; color: var(--muted); font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
     .ci-value { font-weight: 700; margin-top: .1rem; }
     /* WhatsApp CTA card */
@@ -720,13 +711,12 @@
   margin-bottom: 2px;
 }
 .cart-close{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   position: absolute;
   top: 14px;
-  right: 20px;
+  right: 16px;
   background: rgba(255,255,255,.15);
   border: none;
-  color: var(--gold);
+  color: var(--white);
   width: 30px; height: 30px;
   border-radius: 50%;
   cursor: pointer;
@@ -812,10 +802,6 @@
   color: var(--white);
   resize: vertical;
 }
-.cart-field select option{
-  background: var(--char);
-  color: var(--white);
-}
 .cart-field input::placeholder,
 .cart-field textarea::placeholder{ color: var(--muted); }
 .cart-field input:focus,
@@ -826,6 +812,10 @@
   box-shadow: 0 0 0 3px rgba(245,197,24,.15);
 }
 .cart-field textarea{ min-height: 46px; }
+.cart-field select option{
+  background: var(--char);
+  color: var(--white);
+}
 .cart-radio-group{ display: flex; gap: 8px; }
 .cart-radio-opt{
   flex: 1; text-align: center;
@@ -885,6 +875,33 @@
   transition: background .2s, transform .2s;
 }
 .btn-add-cart:hover{ background: #a01020; transform: scale(1.05); }
+
+.cart-dual-btns{
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* telas estreitas: preço e botão do cardápio empilham em vez de espremer */
+@media (max-width: 600px){
+  .menu-card-footer{
+    flex-direction: column;
+    align-items: stretch;
+    gap: .6rem;
+  }
+  .menu-card-footer .btn-add-cart,
+  .menu-card-footer .btn-pedido{
+    width: 100%;
+    text-align: center;
+  }
+  .cart-dual-btns{
+    justify-content: stretch;
+  }
+  .cart-dual-btns .btn-add-cart{
+    flex: 1;
+  }
+}
 
 @media (max-width: 768px){
   .cart-panel{ width: 100vw; border-radius: 16px 16px 0 0; }
