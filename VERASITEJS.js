@@ -32,7 +32,47 @@
       }
     });
   }
+// Carrossel Coverflow do Hero — centro + 2 vizinhos de cada lado
+(function () {
+  const track = document.getElementById('foodTrack');
+  if (!track) return;
 
+  const items = Array.from(track.querySelectorAll('.food-item'));
+  const total = items.length;
+  let centerIndex = 0;
+
+  function render() {
+    items.forEach((item, i) => {
+      // distância circular entre este item e o item central
+      let diff = i - centerIndex;
+      if (diff > total / 2) diff -= total;
+      if (diff < -total / 2) diff += total;
+
+      item.classList.remove('active', 'left', 'right', 'left2', 'right2', 'hidden-slide');
+
+      if (diff === 0) item.classList.add('active');
+      else if (diff === -1) item.classList.add('left');
+      else if (diff === 1) item.classList.add('right');
+      else if (diff === -2) item.classList.add('left2');
+      else if (diff === 2) item.classList.add('right2');
+      else item.classList.add('hidden-slide');
+    });
+  }
+
+  function next() { centerIndex = (centerIndex + 1) % total; render(); }
+  function prev() { centerIndex = (centerIndex - 1 + total) % total; render(); }
+
+  document.querySelector('.food-next').addEventListener('click', next);
+  document.querySelector('.food-prev').addEventListener('click', prev);
+
+  // autoplay opcional — troca a cada 3.5s, pausa ao interagir
+  let autoTimer = setInterval(next, 3500);
+  const carousel = document.querySelector('.food-carousel');
+  carousel.addEventListener('mouseenter', () => clearInterval(autoTimer));
+  carousel.addEventListener('mouseleave', () => { autoTimer = setInterval(next, 3500); });
+
+  render();
+})();
   /* ── LIGHTBOX ── */
   /*function openLightbox(imagen, name) {
     const lb = document.getElementById('lightbox');
