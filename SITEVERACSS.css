@@ -69,11 +69,13 @@
     #nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 0 5vw;
-      background: rgba(13,13,13,.85);
+      background: rgba(13, 13, 13, 0.226);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,.06);
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
       height: 64px;
       transition: background .3s;
     }
@@ -85,11 +87,19 @@
     }
     .nav-brand span { color: var(--red); }
     .nav-links {
-      display: flex; gap: 2rem; list-style: none;
-      font-weight: 700; font-size: .9rem; letter-spacing: .5px;
+      display: flex; 
+      gap: 2rem; 
+      list-style: none;
+      font-weight: 700; 
+      font-size: .9rem; 
+      letter-spacing: .5px;
     }
-    .nav-links a { transition: color .2s; }
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a { 
+      transition: color .2s; 
+    }
+    .nav-links a:hover { 
+      color: var(--gold); 
+    }
     .nav-cta {
       background: var(--green);
       color: var(--dark);
@@ -97,11 +107,21 @@
       border-radius: 999px;
       font-weight: 900;
       font-size: .85rem;
-      display: flex; align-items: center; gap: .5rem;
+      display: flex; 
+      align-items: center; 
+      gap: .5rem;
       transition: transform .2s, box-shadow .2s;
     }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,.35); }
-    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .nav-cta:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 6px 20px rgba(37,211,102,.35); 
+    }
+    .nav-hamburger { 
+      display: none; 
+      flex-direction: column; 
+      gap: 5px; 
+      cursor: pointer; 
+    }
     .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: .3s; }
 
     /* ── HERO ─────────────────────────────────────────────── */
